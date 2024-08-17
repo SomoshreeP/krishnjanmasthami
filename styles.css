@@ -1,0 +1,120 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg3.png'); /* Background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Cover the entire viewport */
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header {
+    background-color: rgba(70, 130, 180, 0.8); /* Semi-transparent header */
+    color: orange;
+    padding: 10px 0;
+    text-align: center;
+    animation: swing 1.5s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 165, 0, 0.5); /* Semi-transparent orange */
+    border-radius: 8px;
+    position: relative; /* Positioning context for absolute positioning */
+}
+
+.intro {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    white-space: pre-wrap; /* Preserves newlines */
+}
+
+.image img, .jn3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    animation: zoomIn 2s ease-in-out;
+}
+
+.jn3 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    animation: swing 2s infinite;
+}
+
+button {
+    background-color: #af894c;
+    color: rgb(255, 165, 0);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.audio-controls button {
+    background-color: #af894c;
+    color: rgb(255, 165, 0);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.audio-controls button:hover {
+    background-color: #45a049;
+}
